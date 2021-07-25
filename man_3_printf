@@ -1,0 +1,80 @@
+NAME: _printf
+
+SYNOPSIS: #include "holberton.h"
+          int_printf(const char *format,...);
+
+DESCRPTION:
+	_printf formats and prints data.
+
+	print arguments according to format or option specified.
+
+	format: string that contains text to be written to stdout.
+
+        write output to stdout, the standard output stream.
+
+        Returns: the number of characters printed (excluding the null byte used to end output to strings).
+
+	List of format specifiers for this function:
+
+	|Specifier|
+
+	%c - character.
+
+	%d or %i - signed decimal integer.
+
+	%E or %e - scientific notation or exponent
+
+	%f - decimal floating point
+	
+	%b - print a number in binary form
+
+	%g - uses the shorter of %e or %f
+	
+	%r - prints the reversed string
+
+        %R - prints the Rot13'ed string
+	
+	%S - prints the string
+
+	%G - uses the shorter of %E or %f
+
+	%o - signed octal 
+
+	%s - string of characters
+
+	%u - unsigned decimal integers
+
+	%x - unsigned hexadecimal integer
+
+	%X - unsigned hexadecimal integers(capital numbers)
+
+	%p - pointer address
+
+	n - nothing printed
+
+	% - character
+
+        %# - alternate form
+	
+	%0 - zero padded
+	
+	%- - left adjusted to the field boundary
+	
+	%+ - placed before a number produced by signed conversion.
+	
+	%l - long or unsigned long argument
+	
+	%h - short or unsigned short argument
+	
+	%' ' - a space
+	
+	precision -  a period ('.')
+	
+	field width - decimal digit string
+
+AUTHOR:
+Imaa Muheto
+Paida Chinodyanama
+
+REPORTING BUGS:
+No known bugs
