@@ -1,0 +1,48 @@
+NAME: _printf
+
+DESCRPTION:
+	_printf formats and prints data.
+
+	print arguments according to format or option specified.
+
+	prototype: int_printf(const char *format,...);
+
+	format: string that contains text to be written to stdout.
+
+	List of format specifiers for this function:
+
+	|Specifier|
+
+	%c - character.
+
+	%d or %i - signed decimal integer.
+
+	%E or %e - scientific notation or exponent
+
+	%f - decimal floating point
+
+	%g - uses the shorter of %e or %f
+
+	%G - uses the shorter of %E or %f
+
+	%o - signed octal 
+
+	%s - string of characters
+
+	%u - unsigned decimal integers
+
+	%x - unsigned hexadecimal integer
+
+	%X - unsigned hexadecimal integers(capital numbers)
+
+	%p - pointer address
+
+	n - nothing printed
+
+	% - character
+
+AUTHOR:
+Imaa Muheto
+
+REPORTING BUGS:
+No none bugs
