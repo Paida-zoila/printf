@@ -1,5 +1,9 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
+
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
 /**
  *struct convert - defines a structure for symbols and functions
  *
