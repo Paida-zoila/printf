@@ -16,7 +16,7 @@ conver_t f_list[] = {
 {"%", print_percent},
 {"d", print_decimal_integer},
 {"i", print_integr},
-{"u", unsigned_integer},
+{"u", print_unsigned_integer},
 {"o", print_octal},
 {"x", print_hex},
 {"X", print_heX},
