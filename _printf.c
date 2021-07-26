@@ -9,10 +9,13 @@
 int _printf(const char *format, ...)
 {
 int count_chars;
+
 conver_t f_list[] = {
 {"c", print_char},
 {"s", print_string},
 {"%", print_percent},
+{"d", print_decimal_integer},
+{"i", print_integer},
 {NULL, NULL}
 };
 va_list arg_list;
