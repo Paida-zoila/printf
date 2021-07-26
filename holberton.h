@@ -23,9 +23,19 @@ typedef struct convert conver_t;
 int _printf(const char *format, ...);
 int _putchar(char c);
 int parser(const char *format, conver_t f_list[], va_list arg_list);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
+int print_char(va_list);/*c*/
+int print_string(va_list);/*s*/
+int print_percent(va_list);/*%*/
+int print_decimal_integer(va_list);/*d*/
+int print_integer(va_list);/*i*/
+int print_binary(va_list);/*b*/
+int print_octal(va_list list);/*o*/
+int print_hex(va_list list); /*x*/
+int print_HEX(va_list list);/*X*/
+int rot13(va_list);/*R*/
+int _write(char);/*write*/
+int unsigned_integer(va_list);/*u*/
+int print_reversed_string(va_list arg);/*r*/
 
 
-#endif/*printf*/
+#endif/*holberton.h*/
