@@ -15,11 +15,16 @@ conver_t f_list[] = {
 {"s", print_string},
 {"%", print_percent},
 {"d", print_decimal_integer},
-{"i", print_integr},
+{"i", print_integer},
 {"u", unsigned_integer},
 {"o", print_octal},
 {"x", print_hex},
-{"X", print_heX},
+{"X", print_HEX},
+{"b", print_binary},
+{"u", print_unsigned_integer},
+{"r", print_reversed_string},
+{"p", print_pointer},
+{"R", rot13},
 {NULL, NULL}
 };
 
