@@ -21,7 +21,6 @@ conver_t f_list[] = {
 {"x", print_hex},
 {"X", print_HEX},
 {"b", print_binary},
-{"u", print_unsigned_integer},
 {"r", print_reversed_string},
 {"p", print_pointer},
 {"R", rot13},

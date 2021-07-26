@@ -36,5 +36,10 @@ int print_unsigned_integer(va_list);/*u*/
 int print_reversed_string(va_list arg);/*r*/
 int print_pointer(va_list);/*p*/
 int rot13(va_list);/*R*/
-
+/* helper functions*/
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int print_unsgined_number(unsigned int);
 #endif/*holberton.h*/
