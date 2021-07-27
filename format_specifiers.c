@@ -38,22 +38,22 @@ int print_percent(__attribute__ ((unused))va_list list)
 	return (1);
 }
 /**
- *unsigned_integer - function that  printd positive integera only
+ *unsigned_integer - function that  printd positive integers only
  *@list: arguments
  *Return: all the numbers.
  */
-int unsigned_integer(va_list list)
+int print_unsigned_integer(va_list list)
 {
 	unsigned int i;
 
 	i = va_arg(list, unsigned int);
 
 	if (i == 0)
-		return (print_unsigned_integer(i));
+		return (print_unsgined_number(i));
 
 	if (i < 1)
 		return (-1);
-	return (print_unsigned_integer(i));
+	return (print_unsgined_number(i));
 }
 /**
  *print_integer - function that prints an integer

@@ -56,5 +56,5 @@ int rot13(va_list list)
 	if (x == 53)
 	_putchar(str[i]);
 	}
-	return (i)
+	return (i);
 }

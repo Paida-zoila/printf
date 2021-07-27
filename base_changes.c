@@ -28,7 +28,7 @@ int print_binary(va_list list)
 			str[i] = '0';
 		else
 			str[i] = '1';
-			num = num / 2;
+		num = num / 2;
 	}
 
 	str[i] = '\0';
@@ -109,7 +109,7 @@ int print_hex(va_list list)
 	}
 	else
 		hex_rep[len] = rem_num + 48;
-		num = num / 16;
+	num = num / 16;
 	}
 	hex_rep[len] = '\0';
 	rev_hex = rev_string(hex_rep);
