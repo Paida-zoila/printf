@@ -1,70 +1,52 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *print_char - funtion that prints character
- *@list: of arguements
- *Return: characters to be printed
+ * format_s - specificer s
+ * @valist: valist
+ * @buffer: buffer
+ * @index: index
+ *
+ * Return: void
  */
-int print_char(va_list list)
+void format_s(va_list valist, char *buffer, int *index)
 {
-	_putchar(va_arg(list, int));
-	return (1);
-}
-
-/**
- *print_string - function that prints string
- *@list: arguments
- *Return: characters to be printed
- */
-int print_string(va_list list)
-{
-	int i;
+	int i, j;
 	char *s;
 
-	s = va_arg(list, char *);
+	s = va_arg(valist, char*);
 	if (s == NULL)
-		s = "null";
-	for (i = 0; s[i] != '\0'; i++)
-		_putchar(s[i]);
-	return (i);
+		s = "(null)";
+	for (i = *index, j = 0; s[j] != '\0';  *index += 1, i++, j++)
+	{
+		if (*index == 1024)
+		{
+			_write_buffer(buffer, index);
+			reset_buffer(buffer);
+			*index = 0;
+		}
+		buffer[*index] = s[j];
+	}
 }
 /**
- *print_percent - function that prints % symbol
- *@list: arguments
- *Return: characters to be printed.
+ * format_c - specificer c
+ * @valist: valist
+ * @buffer: buffer
+ * @index: index
+ *
+ * Return: void
  */
-int print_percent(__attribute__ ((unused))va_list list)
+void format_c(va_list valist, char *buffer, int *index)
 {
-	_putchar('%');
-	return (1);
-}
-/**
- *unsigned_integer - function that  printd positive integera only
- *@list: arguments
- *Return: all the numbers.
- */
-int unsigned_integer(va_list list)
-{
-	unsigned int i;
+	char s;
 
-	i = va_arg(list, unsigned int);
-
-	if (i == 0)
-		return (print_unsigned_integer(i));
-
-	if (i < 1)
-		return (-1);
-	return (print_unsigned_integer(i));
-}
-/**
- *print_integer - function that prints an integer
- *@list: arguments
- *Return: charcters to be printed.
- */
-int print_integer(va_list list)
-{
-	int len;/*len = length*/
-
-	len = print_integer(list);
-	return (len);
-
+	s = va_arg(valist, int);
+	if (*index == 1024)
+	{
+		_write_buffer(buffer, index);
+		reset_buffer(buffer);
+		*index = 0;
+	}
+	buffer[*index] = s;
+	*index += 1;
 }
